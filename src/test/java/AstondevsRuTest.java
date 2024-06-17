@@ -1,3 +1,4 @@
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -93,14 +94,16 @@ public class AstondevsRuTest extends TestBase {
         step("Проверяем переход в раздел 'Работа в ASTON > Карьера'", () -> {
             $("#menu-button-\\:Rp799bqH1\\:").click();
             $("[href=\"\\https://career.astondevs.ru/\"]").click();
-            Selenide.switchTo().window(0);
         });
         step("Проверяем переход в раздел 'Работа в ASTON > Вакансии'", () -> {
+            Selenide.switchTo().window(0);
+            Thread.sleep(1000);
             $("#menu-button-\\:Rp799bqH1\\:").click();
             $("[href=\"\\https://career.astondevs.ru/vacancy\"]").click();
-            Selenide.switchTo().window(0);
         });
         step("Проверяем переход в раздел 'Работа в ASTON > Стажировка'", () -> {
+            Selenide.switchTo().window(0);
+            Thread.sleep(1000);
             $("#menu-button-\\:Rp799bqH1\\:").click();
             $("[href=\"\\https://career.astondevs.ru/trainee\"]").click();
         });
