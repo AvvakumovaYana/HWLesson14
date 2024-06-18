@@ -1,12 +1,8 @@
 ﻿
 # Проект по автоматизации тестирования для компании [ASTON](https://astondevs.ru/)  
-<div style="text-align: center">
-  <div style="display: inline-block">
-    <a href="https://astondevs.ru/">
-      <img src="media/Logo/AstonLogo.svg" width="150" height="150" alt="IDEA"/>
-    </a>
-  </div>
-</div>
+<p align="center"> 
+<img src="media/Logo/AstonLogo.svg" width="150" height="150" alt="IDEA"/>
+</p>
 
 **ASTON** — российская аккредитованная ИТ-компания, четырехкратный обладатель премии «Работодатель года» по версии Habr (2019, 2020, 2021, 2022 гг.). C 2007 года разрабатываем цифровые решения для b2b-клиентов.
 
@@ -67,12 +63,12 @@
 ### Команды для запуска из терминала
 ***Локальный запуск:***
 ```bash  
-clean zentist_test
+clean main_test
 ```
 
 ***Удалённый запуск через Jenkins:***
 ```bash  
-clean zentist_test
+clean main_test
 "-DWdhost=${WDHOST}" 
 "-DBrowser=${BROWSER}" 
 "-DBrowserVersion=${BROWSER_VERSION}" 
@@ -85,17 +81,17 @@ clean zentist_test
 <a href="https://jenkins.autotests.cloud/job/Tests%20for%20ASTON/5/allure/"><img src="media/Allure2Tests.png" alt="Allure" width="950"/></a>  
 </p>
 <p align="center">  
-<a href="https://jenkins.autotests.cloud/job/Tests%20for%20ASTON/5/allure/"><img src="media/AllureTests.png" alt="Allure" width="950"/></a>  
+<a href="https://jenkins.autotests.cloud/job/Tests%20for%20ASTON/5/allure/#suites/"><img src="media/AllureTests.png" alt="Allure" width="950"/></a>  
 </p>
 
 <a id="telegram"></a>
 ## Уведомление в Telegram
 <p align="center">  
-<img src="media/TelegramTests.png" alt="Telegram" width="550"/>  
+<img src="media/TelegramTests.png" alt="Telegram" width="450"/>  
 </p>
 
 <a id="video"></a>
 ## Выполнение тестов на Selenoid
 <p align="center">  
-<img src="media/AstonTests.mp4" alt="Video" width="550" height="350"/>  
+<img src="media/AstonTests.gif" alt="Video" width="650"/>  
 </p>
