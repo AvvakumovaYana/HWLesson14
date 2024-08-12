@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
@@ -21,8 +22,8 @@ public class AstondevsRuTest extends TestBase {
             $("[href=\"\\/about-us\"]").shouldBe(visible).shouldHave(text("О нас"));
         });
         step("Проверяем наличие раздела 'Услуги' с выпадающим списком в меню сайта", () -> {
-            $("#menu-button-\\:Rl799bqH1\\:").shouldBe(visible).shouldHave(text("Услуги"));
-            $("#menu-button-\\:Rl799bqH1\\:").click();
+            $("#menu-button-\\:R2kt59bqH1\\:").shouldBe(visible).shouldHave(text("Услуги"));
+            $("#menu-button-\\:R2kt59bqH1\\:").click();
             $("[href=\"\\/1C\"]").shouldBe(visible).shouldHave(text("1С-разработка"));
             $("[href=\"\\/services/managed-delivery\"]").shouldBe(visible).shouldHave(text("Проектная разработка"));
             $("[href=\"\\/services/software-team-staff-augmentation\"]").shouldBe(visible).shouldHave(text("Расширение команды"));
@@ -32,8 +33,8 @@ public class AstondevsRuTest extends TestBase {
             $("[href=\"\\/our-projects\"]").shouldBe(visible).shouldHave(text("Проекты"));
         });
         step("Проверяем наличие раздела 'Работа в ASTON' с выпадающим списком в меню сайта", () -> {
-            $("#menu-button-\\:Rp799bqH1\\:").shouldBe(visible).shouldHave(text("Работа в ASTON"));
-            $("#menu-button-\\:Rp799bqH1\\:").click();
+            $("#menu-button-\\:R34t59bqH1\\:").shouldBe(visible).shouldHave(text("Работа в ASTON"));
+            $("#menu-button-\\:R34t59bqH1\\:").click();
             $("[href=\"\\https://career.astondevs.ru/\"]").shouldBe(visible).shouldHave(text("Карьера"));
             $("[href=\"\\https://career.astondevs.ru/vacancy\"]").shouldBe(visible).shouldHave(text("Вакансии"));
             $("[href=\"\\https://career.astondevs.ru/trainee\"]").shouldBe(visible).shouldHave(text("Стажировка"));
@@ -52,25 +53,25 @@ public class AstondevsRuTest extends TestBase {
             Selenide.back();
         });
         step("Проверяем переход в раздел 'Услуги > 1С-разработка'", () -> {
-            $("#menu-button-\\:Rl799bqH1\\:").click();
+            $("#menu-button-\\:R2kt59bqH1\\:").click();
             $("[href=\"\\/1C\"]").click();
             $(".css-1rqn5if").shouldHave(text("1С-решения для автоматизации бизнеса"));
             Selenide.back();
         });
         step("Проверяем переход в раздел 'Услуги > Проектная разработка'", () -> {
-            $("#menu-button-\\:Rl799bqH1\\:").click();
+            $("#menu-button-\\:R2kt59bqH1\\:").click();
             $("[href=\"\\/services/managed-delivery\"]").click();
             $(".css-v01be4").shouldHave(text("Проектная разработка под ключ"));
             Selenide.back();
         });
         step("Проверяем переход в раздел 'Услуги > Расширение команды'", () -> {
-            $("#menu-button-\\:Rl799bqH1\\:").click();
+            $("#menu-button-\\:R2kt59bqH1\\:").click();
             $("[href=\"\\/services/software-team-staff-augmentation\"]").click();
             $(".css-18el68v").shouldHave(text("Талантливые ИТ-специалисты для вашего проекта"));
             Selenide.back();
         });
         step("Проверяем переход в раздел 'Услуги > ФинТех'", () -> {
-            $("#menu-button-\\:Rl799bqH1\\:").click();
+            $("#menu-button-\\:R2kt59bqH1\\:").click();
             $("[href=\"\\/services/financial-services\"]").click();
             $(".css-xudeyq").shouldHave(text("Разработка финансового ПО"));
             Selenide.back();
@@ -89,19 +90,19 @@ public class AstondevsRuTest extends TestBase {
             open("/");
         });
         step("Проверяем переход в раздел 'Работа в ASTON > Карьера'", () -> {
-            $("#menu-button-\\:Rp799bqH1\\:").click();
+            $("#menu-button-\\:R34t59bqH1\\:").click();
             $("[href=\"\\https://career.astondevs.ru/\"]").click();
         });
         step("Проверяем переход в раздел 'Работа в ASTON > Вакансии'", () -> {
             Selenide.switchTo().window(0);
             Thread.sleep(1000);
-            $("#menu-button-\\:Rp799bqH1\\:").click();
+            $("#menu-button-\\:R34t59bqH1\\:").click();
             $("[href=\"\\https://career.astondevs.ru/vacancy\"]").click();
         });
         step("Проверяем переход в раздел 'Работа в ASTON > Стажировка'", () -> {
             Selenide.switchTo().window(0);
             Thread.sleep(1000);
-            $("#menu-button-\\:Rp799bqH1\\:").click();
+            $("#menu-button-\\:R34t59bqH1\\:").click();
             $("[href=\"\\https://career.astondevs.ru/trainee\"]").click();
         });
     }
@@ -113,7 +114,7 @@ public class AstondevsRuTest extends TestBase {
             open("/");
         });
         step("Нажимаем кнопку 'Оставить заявку' ", () -> {
-            $(".css-1pqo36s").click();
+            $(".css-kjntlw").click();
         });
         step("Провреяем содрежание формы заявки", () -> {
             $(".css-10hujt4")
@@ -147,10 +148,9 @@ public class AstondevsRuTest extends TestBase {
     void sendFormWithoutEmailTest() {
         step("Открываем главную страницу сайта", () -> {
             open("/");
-            $(".css-5jylfw").click();
         });
         step("Нажимаем кнопку 'Оставить заявку' ", () -> {
-            $(".css-1pqo36s").click();
+            $(".css-kjntlw").click();
         });
         step("Заполняем обязательные поля формы, кроме поля 'E-mail'", () -> {
             $("#contact-form > div > form > div:nth-child(3) > div > input")
@@ -162,7 +162,8 @@ public class AstondevsRuTest extends TestBase {
             $("#contact-form > div > form > div:nth-child(7) > div > textarea")
                     .setValue("Описание тестового проекта");
         });
-        step("Отправляем форму", () -> {
+        step("Нажимаем на кнопку 'Отправить'", () -> {
+            $(".css-pojmik").scrollTo();
             $("#contact-form > div > form > button").click();
         });
         step("Проверяем валидацию поля 'E-mail'", () -> {
@@ -170,8 +171,8 @@ public class AstondevsRuTest extends TestBase {
                     .shouldBe(visible)
                     .shouldHave(text("Укажите E-mail"));
         });
-        step("Проверяем, что кнопка 'Отправить' некликабельна ", () -> {
-            $("#contact-form > div > form > button").shouldHave(attribute("disabled"));
+        step("Проверяем, что кнопка 'Отправить' некликабельна", () -> {
+            $(byText("Отправить")).shouldHave(attribute("disabled"));
         });
     }
 }
