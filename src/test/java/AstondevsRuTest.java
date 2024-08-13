@@ -9,9 +9,10 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-@Tag("main")
-public class AstondevsRuTest extends TestBase {
 
+public class AstondevsRuTest extends TestBase {
+    @Tag("main")
+    @Tag("smoke")
     @DisplayName("Проверка разделов меню на главной странице")
     @Test
     void menuOnMainPageTest() {
@@ -41,6 +42,7 @@ public class AstondevsRuTest extends TestBase {
         });
     }
 
+    @Tag("main")
     @DisplayName("Проверка перехода по разделам меню с главной страницы (кроме 'Работа в ASTON')")
     @Test
     void menuLinksOnMainPageTest() {
@@ -83,6 +85,7 @@ public class AstondevsRuTest extends TestBase {
         });
     }
 
+    @Tag("main")
     @DisplayName("Проверка перехода по подразделам 'Работа в ASTON' с главной страницы")
     @Test
     void workInAstonLinksOnMainPageTest() {
@@ -107,6 +110,7 @@ public class AstondevsRuTest extends TestBase {
         });
     }
 
+    @Tag("main")
     @DisplayName("Проверка содержания формы заявки на главной странице")
     @Test
     void applicationFormOnMainPageTest() {
@@ -143,6 +147,7 @@ public class AstondevsRuTest extends TestBase {
         });
     }
 
+    @Tag("main")
     @DisplayName("Негативная проверка отправки формы заявки без заполнения обязательного поля 'E-mail'")
     @Test
     void sendFormWithoutEmailTest() {
