@@ -1,4 +1,5 @@
 import com.codeborne.selenide.Selenide;
+import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -15,6 +16,7 @@ public class AstondevsRuTest extends TestBase {
     @Tag("smoke")
     @DisplayName("Проверка разделов меню на главной странице")
     @Test
+    @AllureId("33760")
     void menuOnMainPageTest() {
         step("Открываем главную страницу сайта", () -> {
             open("/");
@@ -45,6 +47,7 @@ public class AstondevsRuTest extends TestBase {
     @Tag("main")
     @DisplayName("Проверка перехода по разделам меню с главной страницы (кроме 'Работа в ASTON')")
     @Test
+    @AllureId("33762")
     void menuLinksOnMainPageTest() {
         step("Открываем главную страницу сайта", () -> {
             open("/");
@@ -88,6 +91,7 @@ public class AstondevsRuTest extends TestBase {
     @Tag("main")
     @DisplayName("Проверка перехода по подразделам 'Работа в ASTON' с главной страницы")
     @Test
+    @AllureId("33763")
     void workInAstonLinksOnMainPageTest() {
         step("Открываем главную страницу сайта", () -> {
             open("/");
@@ -113,6 +117,7 @@ public class AstondevsRuTest extends TestBase {
     @Tag("main")
     @DisplayName("Проверка содержания формы заявки на главной странице")
     @Test
+    @AllureId("33764")
     void applicationFormOnMainPageTest() {
         step("Открываем главную страницу сайта", () -> {
             open("/");
@@ -150,6 +155,7 @@ public class AstondevsRuTest extends TestBase {
     @Tag("main")
     @DisplayName("Негативная проверка отправки формы заявки без заполнения обязательного поля 'E-mail'")
     @Test
+    @AllureId("33765")
     void sendFormWithoutEmailTest() {
         step("Открываем главную страницу сайта", () -> {
             open("/");
